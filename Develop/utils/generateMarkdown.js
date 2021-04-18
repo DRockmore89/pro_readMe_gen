@@ -63,7 +63,11 @@ function renderLicenseSection(license) {
     }
 }
 
-// gitt
+// function renderTableofcontent(answers) {
+//   let Tableofcontents = 1. [${answers.projectName}[#${answers.projectName.toLowerCase})
+//   ]
+
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
