@@ -66,10 +66,6 @@ function renderLicenseSection(license) {
     }
 }
 
-function renderTableofcontent(data) {
-  
-}
-
 
 
 // TODO: Create a function to generate markdown for README
