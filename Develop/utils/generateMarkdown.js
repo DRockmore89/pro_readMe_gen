@@ -1,4 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
+
+// const { Http2ServerRequest } = require("http2");
+
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch (license) {
@@ -63,33 +66,40 @@ function renderLicenseSection(license) {
     }
 }
 
-// function renderTableofcontent(answers) {
-//   let Tableofcontents = 1. [${answers.projectName}[#${answers.projectName.toLowerCase})
-//   ]
+function renderTableofcontent(data) {
+  
+}
 
 
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
-  let licenseBadge = renderLicenseBadge(answers.projectlicense);
-  let licenseLink = renderLicenseLink(answers.projectlicense);
-  let licenseSection = renderLicenseSection(answers.projectlicense);
-  let tableofcontent = renderTableofcontent(answers);
-  return `# ${answers.projectName}\n
-  ![${answers.projectlicense}](${licenseBadge})\n
-  [Repository](${answers.projectRepo})\n
-  ## Table of Content\n ${tableofcontent}\n
-  ## Description\n > ${answers.projectDescription}\n
-  ##Installation\n > ${answers.projectInstallation}\n
-  ##usage\n > ${answers.projectUsage}\n
-  ##License\n > [${answers.projectLicense}](${licenseLink})\n
-  ${licenseSection}\n
-  ##Contact\n > Please contact me for any questions about projects or work
+function generateMarkdown(answers) {return`
+# ${answers.projectName}
+https://github.com/${answers.github}/${answers.projectName}
+#Description
+${answers.Description}
+# Table of content
+* [installation](#installation)
+* [usage](#usage)
+* [License](#License)
+* [contributing](#contributing)
+* [Test](#test)
+* [Questions](#questions)
+# Installation
+The following necessary dependencies must be installed to run the application.
+# Usage
+In order to use this app, ${answers.usage}
+# License
+This projected is license under the ${answers.License} License.
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# contributing
+contributors: ${answers.Contributing}
+# Tests
+The followingis needed to run the test: ${answers.Tests}
+# Questions
+If you have any questions about the repo, open an issue or contact ${answers.usage}`}
 
 
-  
-
-`;
-}
+ 
 
 module.exports = generateMarkdown;

@@ -1,0 +1,22 @@
+{
+  "name": "proreadme",
+  "version": "1.0.0",
+  "description": "this is generating a readme ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pro_readMe_gen"
+  },
+  "keywords": [
+    "ReadME"
+  ],
+  "author": "Donald Rockmore",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "*",
+    "lodash": "^4.17.21"
+  }
+}
